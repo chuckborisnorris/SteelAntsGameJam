@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - item
+  - check
+  - textbox
+  - no_item
+  - story
+  - skullcheck
+  - shovelcheck
+  - ending
   layers:
   - Default
   - TransparentFX
