@@ -4,8 +4,9 @@
  
  public class ShowText : MonoBehaviour {
 
+	 public string charName;
      public string message;
-	 public string dialogue1;
+//	 public string dialogue1;
 	 public GameObject bNo;
 	 public GameObject bYes;
 	 public GameObject textBox;
@@ -21,7 +22,10 @@
 	 }
 	 
 	 public void ShowDialogue ()  {
-		 textBox.GetComponentInChildren<Text>().text = dialogue1;
+		 StoryController story = GameObject.FindGameObjectWithTag("story").GetComponent<StoryController>();
+		 string dialogue = story.GetDialogue(charName);
+		 textBox.GetComponentInChildren<Text>().text = dialogue;
+		 story.Progress(charName,1);
 		 textBox.SetActive(true);	 
 	 }
  
